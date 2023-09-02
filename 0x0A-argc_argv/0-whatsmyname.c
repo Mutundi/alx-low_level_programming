@@ -6,7 +6,7 @@
  * Return: 0 for success.
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	if (argc > 0)
 	{
