@@ -8,7 +8,7 @@
 
 int main(int argc, char *argv[])
 {
-	(void)argc;
+	if (argc > 0)
 	{
 		printf("The name of the program is: %s\n", argv[0]);
 	}
