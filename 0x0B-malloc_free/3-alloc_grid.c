@@ -32,7 +32,7 @@ int **alloc_grid(int width, int height)
 			/** Free if memory allocated fails **/
 			for (n = 0; n < m; n++)
 			{
-				free(matrix[m]);
+				free(matrix[n]);
 			}
 			free(matrix);
 			return (NULL);
