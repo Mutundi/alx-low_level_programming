@@ -19,7 +19,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	/** Check for special cases **/
 	if (ptr == NULL)
 		return (malloc(new_size));
-
 	if (new_size == 0)
 	{
 		free(ptr);
@@ -32,6 +31,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	/** Allocate new memory **/
 	new_ptr = malloc(new_size);
+	if (new_ptr == NULL)
+		return (NULL);/** Memory allocation failure **/
 
 	/** Determine the copy size **/
 	if (old_size > new_size)
@@ -48,7 +49,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	/** Free old memory **/
 	free(ptr);
-
 	/** Return a pointer to the newly allocated memory block **/
 	return (new_ptr);
 }
